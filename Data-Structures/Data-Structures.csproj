@@ -43,7 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataStructureBuilder.cs" />
+    <Compile Include="Classes\DataStructures\LinkedList\ILinkedList.cs" />
+    <Compile Include="Classes\DataStructures\LinkedList\INode.cs" />
+    <Compile Include="Classes\DataStructures\LinkedList\LinkedList.cs" />
+    <Compile Include="Classes\DataStructures\LinkedList\Node.cs" />
+    <Compile Include="Classes\Utility\ProgramHandler.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Classes\Utility\ProgramMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
