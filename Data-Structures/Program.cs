@@ -10,6 +10,7 @@ namespace Data_Structures
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Test");
         }
     }
 }
