@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Structures.Classes.DataStructures.LinkedList
+namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
 {
     internal class LinkedList<T> : ILinkedList<T>, IEnumerable<T>
     {
