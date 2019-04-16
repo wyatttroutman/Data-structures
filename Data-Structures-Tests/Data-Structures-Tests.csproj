@@ -54,6 +54,7 @@
     <Compile Include="Tests\LinkedList\FindUnitTest.cs" />
     <Compile Include="Tests\LinkedList\GetHeadUnitTest.cs" />
     <Compile Include="Tests\LinkedList\GetTailUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\IndexerUnitTest.cs" />
     <Compile Include="Tests\LinkedList\InitializationUnitTest.cs" />
     <Compile Include="Tests\LinkedList\InsertAfterUnitTest.cs" />
     <Compile Include="Tests\LinkedList\InsertBeginningUnitTest.cs" />

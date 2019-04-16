@@ -24,6 +24,18 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
             count = 1;
         }
 
+        public T this[int i]
+        {
+            get
+            {
+                return FindAt(i);
+            }
+            set
+            {
+                SetAt(value, i);
+            }
+        }
+
         public Node<T> Find(T data)
         {
             Node<T> node = GetHead();
@@ -148,6 +160,35 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
         public int GetCount()
         {
             return count;
+        }
+
+        private T FindAt(int index)
+        {
+            Node<T> node = GetHead();
+            for (int i = 0; i < index; i++)
+            {
+                node = node.NextNode;
+            }
+            return node.GetData();
+        }
+
+        private void SetAt(T value, int index)
+        {
+            Node<T> node = GetHead();
+            Node<T> newNode = new Node<T>(value);
+            if (node == null)
+            {
+                head = newNode;
+            } else
+            {
+                for (int i = 0; i < index - 1; i++)
+                {
+                    node = node.NextNode;
+                }
+                newNode.NextNode = node.NextNode;
+                node.NextNode = newNode;
+            }
+            count++;
         }
     }
 }
