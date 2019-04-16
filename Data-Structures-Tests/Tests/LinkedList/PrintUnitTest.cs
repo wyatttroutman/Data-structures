@@ -27,19 +27,23 @@ namespace Data_Structures_Tests.Tests.LinkedList
         [TestMethod]
         public void PrintEmpty()
         {
-            throw new NotImplementedException();
+            Assert.IsTrue(linkedList.ToString() == "");
         }
 
         [TestMethod]
         public void PrintOneElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            Assert.IsTrue(linkedList.ToString() == "Test");
         }
 
         [TestMethod]
         public void PrintManyElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            linkedList.InsertBeginning("Test1");
+            linkedList.InsertBeginning("Test2");
+            Assert.IsTrue(linkedList.ToString() == "Test2, Test1, Test");
         }
     }
 }

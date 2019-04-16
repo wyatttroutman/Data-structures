@@ -27,19 +27,44 @@ namespace Data_Structures_Tests.Tests.LinkedList
         [TestMethod]
         public void EnumerateEmpty()
         {
-            throw new NotImplementedException();
+            Assert.IsNull(linkedList.GetHead());
+            foreach (var node in linkedList)
+            {
+                throw new KeyNotFoundException();
+            }
         }
 
         [TestMethod]
         public void EnumerateOneElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            Assert.IsNotNull(linkedList.GetHead());
+
+            int i = 0;
+            foreach (var node in linkedList)
+            {
+                Assert.IsTrue(i == 0);
+                Assert.IsNotNull(node);
+                Assert.IsTrue(node.ToString() == "Test");
+                i++;
+            }
         }
 
         [TestMethod]
         public void EnumerateManyElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            linkedList.InsertBeginning("Test1");
+            linkedList.InsertBeginning("Test2");
+            Assert.IsNotNull(linkedList.GetHead());
+
+            int i = 0;
+            foreach (var node in linkedList)
+            {
+                Assert.IsTrue(i <= 3);
+                Assert.IsNotNull(node);
+                i++;
+            }
         }
     }
 }

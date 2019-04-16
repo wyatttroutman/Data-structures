@@ -13,8 +13,7 @@
         
         void RemoveAfter(Node<T> node);
         void RemoveBeginning();
-
-        void Print();
+        
         void Clear();
     }
 }

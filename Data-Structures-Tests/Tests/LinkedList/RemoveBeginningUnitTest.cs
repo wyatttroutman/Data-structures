@@ -27,19 +27,31 @@ namespace Data_Structures_Tests.Tests.LinkedList
         [TestMethod]
         public void RemoveBeginningEmpty()
         {
-            throw new NotImplementedException();
+            Assert.IsNull(linkedList.GetHead());
+            linkedList.RemoveBeginning();
+            Assert.IsNull(linkedList.GetHead());
         }
 
         [TestMethod]
         public void RemoveBeginningOneElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            Assert.IsNotNull(linkedList.GetHead());
+            linkedList.RemoveBeginning();
+            Assert.IsNull(linkedList.GetHead());
         }
 
         [TestMethod]
         public void RemoveBeginningManyElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            linkedList.InsertBeginning("Test1");
+            linkedList.InsertBeginning("Test2");
+            Assert.IsNotNull(linkedList.GetHead());
+            Assert.IsTrue(linkedList.GetHead().ToString() == "Test2");
+            linkedList.RemoveBeginning();
+            Assert.IsNotNull(linkedList.GetHead());
+            Assert.IsTrue(linkedList.GetHead().ToString() == "Test1");
         }
     }
 }

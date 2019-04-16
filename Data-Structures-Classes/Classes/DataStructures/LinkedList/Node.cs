@@ -18,11 +18,6 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
             return this.data;
         }
 
-        public void Print()
-        {
-            Console.WriteLine(data.ToString());
-        }
-
         public override string ToString()
         {
             return data.ToString();

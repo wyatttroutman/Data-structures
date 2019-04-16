@@ -25,21 +25,33 @@ namespace Data_Structures_Tests.Tests.LinkedList
         }
 
         [TestMethod]
-        public void RemoveAfterEmpty()
+        public void RemoveAfterNull()
         {
-            throw new NotImplementedException();
+            linkedList.RemoveAfter(null);
         }
 
         [TestMethod]
         public void RemoveAfterOneElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            Assert.IsTrue(linkedList.GetHead() == linkedList.GetTail());
+            linkedList.RemoveAfter(linkedList.GetHead());
+            Assert.IsTrue(linkedList.GetHead() == linkedList.GetTail());
+            Assert.IsTrue(linkedList.GetHead().ToString() == "Test");
         }
 
         [TestMethod]
         public void RemoveAfterManyElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            linkedList.InsertBeginning("Test1");
+            linkedList.InsertBeginning("Test2");
+            Assert.IsTrue(linkedList.GetHead().ToString() == "Test2");
+
+            linkedList.RemoveAfter(linkedList.GetHead());
+            linkedList.RemoveAfter(linkedList.GetHead());
+
+            Assert.IsTrue(linkedList.GetHead().ToString() == linkedList.GetTail().ToString());
         }
     }
 }

@@ -27,19 +27,29 @@ namespace Data_Structures_Tests.Tests.LinkedList
         [TestMethod]
         public void ClearEmpty()
         {
-            throw new NotImplementedException();
+            Assert.IsNull(linkedList.GetHead());
+            linkedList.Clear();
+            Assert.IsNull(linkedList.GetHead());
         }
 
         [TestMethod]
         public void ClearOneElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            Assert.IsNotNull(linkedList.GetHead());
+            linkedList.Clear();
+            Assert.IsNull(linkedList.GetHead());
         }
 
         [TestMethod]
         public void ClearManyElement()
         {
-            throw new NotImplementedException();
+            linkedList.InsertBeginning("Test");
+            linkedList.InsertBeginning("Test1");
+            linkedList.InsertBeginning("Test2");
+            Assert.IsNotNull(linkedList.GetHead());
+            linkedList.Clear();
+            Assert.IsNull(linkedList.GetHead());
         }
     }
 }

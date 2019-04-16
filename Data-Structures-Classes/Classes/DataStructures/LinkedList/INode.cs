@@ -3,6 +3,5 @@
     internal interface INode<T>
     {
         T GetData();
-        void Print();
     }
 }

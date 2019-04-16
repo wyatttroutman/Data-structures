@@ -10,7 +10,7 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
     public class LinkedList<T> : ILinkedList<T>, IEnumerable<T>
     {
         private Node<T> head;
-        
+
         public LinkedList()
         {
             head = null;
@@ -77,12 +77,23 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
 
         public void RemoveAfter(Node<T> node)
         {
-            node.NextNode = node.NextNode.NextNode;
+            if (node != null && node.NextNode != null)
+            {
+                if (node.NextNode.NextNode != null)
+                {
+                    node.NextNode = node.NextNode.NextNode;
+                }
+                else
+                {
+                    node.NextNode = null;
+                }
+            }
         }
 
         public void RemoveBeginning()
         {
-            head = head.NextNode;
+            if (head != null)
+                head = head.NextNode;
         }
 
         public void Clear()
@@ -95,14 +106,18 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
             }
         }
 
-        public void Print()
+
+        public override string ToString()
         {
+            string toString = "";
             Node<T> node = GetHead();
             while (node != null)
             {
-                node.Print();
+                toString += node.ToString() + ", ";
                 node = node.NextNode;
             }
+
+            return toString.TrimEnd().TrimEnd(',');
         }
 
         public IEnumerator<T> GetEnumerator()
