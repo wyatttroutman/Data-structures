@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
 {
-    internal class LinkedList<T> : ILinkedList<T>, IEnumerable<T>
+    public class LinkedList<T> : ILinkedList<T>, IEnumerable<T>
     {
         private Node<T> head;
         

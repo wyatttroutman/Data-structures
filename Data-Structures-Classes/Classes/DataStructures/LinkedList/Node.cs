@@ -2,7 +2,7 @@
 
 namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
 {
-    internal class Node<T>: INode<T>
+    public class Node<T>: INode<T>
     {
         public Node<T> NextNode { get; set; }
 
@@ -21,6 +21,11 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
         public void Print()
         {
             Console.WriteLine(data.ToString());
+        }
+
+        public override string ToString()
+        {
+            return data.ToString();
         }
     }
 }

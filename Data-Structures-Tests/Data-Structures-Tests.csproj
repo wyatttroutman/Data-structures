@@ -49,8 +49,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests\LinkedList\LinkedListUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\ClearUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\EnumerableUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\FindUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\GetHeadUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\GetTailUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\InitializationUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\InsertAfterUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\InsertBeginningUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\LinkedList\PrintUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\RemoveAfterUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\RemoveBeginningUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
