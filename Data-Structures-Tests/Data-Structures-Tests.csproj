@@ -62,6 +62,7 @@
     <Compile Include="Tests\LinkedList\RemoveAfterUnitTest.cs" />
     <Compile Include="Tests\LinkedList\RemoveBeginningUnitTest.cs" />
     <Compile Include="Tests\LinkedList\GetCountUnitTest.cs" />
+    <Compile Include="Tests\LinkedList\FunctionalityUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
