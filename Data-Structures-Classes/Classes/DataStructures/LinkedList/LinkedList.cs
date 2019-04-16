@@ -10,15 +10,18 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
     public class LinkedList<T> : ILinkedList<T>, IEnumerable<T>
     {
         private Node<T> head;
+        private int count;
 
         public LinkedList()
         {
             head = null;
+            count = 0;
         }
 
         public LinkedList(T headData)
         {
             head = new Node<T>(headData);
+            count = 1;
         }
 
         public Node<T> Find(T data)
@@ -61,6 +64,7 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
         {
             newNode.NextNode = node.NextNode;
             node.NextNode = newNode;
+            count++;
         }
 
         public void InsertBeginning(T newData)
@@ -72,6 +76,7 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
         {
             newNode.NextNode = GetHead();
             head = newNode;
+            count++;
         }
 
 
@@ -87,13 +92,17 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
                 {
                     node.NextNode = null;
                 }
+                count--;
             }
         }
 
         public void RemoveBeginning()
         {
             if (head != null)
+            {
                 head = head.NextNode;
+                count--;
+            }
         }
 
         public void Clear()
@@ -104,6 +113,7 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
                 head = node.NextNode;
                 node = head;
             }
+            count = 0;
         }
 
 
@@ -133,6 +143,11 @@ namespace Data_Structures_Classes.Classes.DataStructures.LinkedList
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public int GetCount()
+        {
+            return count;
         }
     }
 }

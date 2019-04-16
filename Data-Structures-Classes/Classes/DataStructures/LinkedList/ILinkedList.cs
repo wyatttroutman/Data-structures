@@ -4,6 +4,7 @@
     {
         Node<T> GetHead();
         Node<T> GetTail();
+        int GetCount();
         Node<T> Find(T data);
 
         void InsertAfter(Node<T> node, T newData);
