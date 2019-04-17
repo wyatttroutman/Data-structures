@@ -9,7 +9,13 @@ This repository represents some of the code I have written to gain a more robust
 
 ## Current Implementations
 - ### Generic Singularly Linked List
-   This implementation of a singularly linked list uses the following implemented classes and interfaces: `INode`, `ILinkedList`, `Node`, `LinkedList`. It also implements the `IEnumerable` class. This implementation implements standard linked list functionality including, `Find`, `InsertBeginning`, `InsertAfter`, etc. Since it is a generic class, it can be used as a linked list of any object type. To help facilitate this, it uses the `EqualityComparer<T>` generic class to check equality when needed.
+   This implementation of a singularly linked list uses the following implemented classes and interfaces: `INode`, `ILinkedList`, `Node`, `LinkedList`. It also implements the `IEnumerable` class and is indexable. This implementation implements standard linked list functionality including, `Find`, `InsertBeginning`, `InsertAfter`, etc. Since it is a generic class, it can be used as a linked list of any object type. To help facilitate this, it uses the `EqualityComparer<T>` generic class to check equality when needed.
+   
+- ### Generic Stack
+   This implementation of a stack uses the following implemented classes and interfaces: `INode`, `ILinkedList`, `Node`, `Stack`. This implementation implements standard stack funcationlity including `IsEmpty`, `GetCount`, `Peek`, `Pop`, and `Push`. Since it is a generic class, it can be used as a stack of any object type. 
+   
+## Unit Tests
+Each data structure implementation in this repository has unit tests to help verify correctness. In Visual Studio, you can run unit tests by going to Test on the navigation menu, then Run, then Run All to run all unit tests. Each function of each class has at least 3 unit test methods for base scenarios: empty data structure, single element data structure, and many element data structure. Additional test cases are provided as needed. However, I think hitting these base cases is adequate for the purposes of this project.
 
 ## Usage
 To run this project, clone the solution or use Git's "Open in Visual Studio" function to launch the solution in Visual Studio. The data structures are implemented in a C# Class Library project named `Data-Structures-Classes`. The unit tests for the data structures are implemented in a C# Unit Test project named `Data-Structures-Tests`. 
