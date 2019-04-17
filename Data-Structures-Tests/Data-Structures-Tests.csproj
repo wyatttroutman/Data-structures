@@ -64,6 +64,11 @@
     <Compile Include="Tests\LinkedList\RemoveBeginningUnitTest.cs" />
     <Compile Include="Tests\LinkedList\GetCountUnitTest.cs" />
     <Compile Include="Tests\LinkedList\FunctionalityUnitTest.cs" />
+    <Compile Include="Tests\Stack\IsEmptyUnitTest.cs" />
+    <Compile Include="Tests\Stack\GetCountUnitTest.cs" />
+    <Compile Include="Tests\Stack\PeekUnitTest.cs" />
+    <Compile Include="Tests\Stack\PopUnitTest.cs" />
+    <Compile Include="Tests\Stack\PushUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
